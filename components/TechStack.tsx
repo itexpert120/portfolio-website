@@ -66,14 +66,14 @@ export default function TechStack() {
         {icons.map((icon) =>
           icon.id === "next.js" || icon.id === "github" ? (
             <div
-              className="flex justify-center items-center dark:invert"
+              className="flex justify-center items-center dark:invert hover:scale-125 transition"
               key={icon.id}
             >
-              <Image src={icon.image} alt="icon" width={120} height={120} />
+              <Image src={icon.image} alt={icon.id} width={120} height={120} />
             </div>
           ) : (
-            <div className="flex justify-center items-center" key={icon.id}>
-              <Image src={icon.image} alt="icon" width={120} height={120} />
+            <div className="flex justify-center items-center hover:scale-125 transition" key={icon.id}>
+              <Image src={icon.image} alt={icon.id} width={120} height={120} />
             </div>
           )
         )}

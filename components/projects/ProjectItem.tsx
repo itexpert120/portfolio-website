@@ -20,7 +20,7 @@ export default function ProjectItem({
   codeLink,
 }: ProjectItemProps) {
   return (
-    <div className="text-left flex flex-col gap-4 items-center w-[335px] h-[530px] shadow-2xl rounded-3xl dark:bg-[#363636]">
+    <div className="text-left flex flex-col gap-4 items-center w-[335px] h-[530px] shadow-2xl rounded-3xl dark:bg-[#363636] hover:scale-105 transition">
       <div className="max-h-260px flex-1">
         <Image
           src={imgSrc ? imgSrc : "/projects/placeholder.png"}

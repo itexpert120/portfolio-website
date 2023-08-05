@@ -14,7 +14,7 @@ import {
 const links = [
   {
     label: "Home",
-    id: "/",
+    id: "#top",
   },
   {
     label: "About",
@@ -57,7 +57,7 @@ export default function Header() {
   return (
     <nav className="flex items-center backdrop-blur-md bg-black/5 sticky top-0 h-20 max-w-screen z-50">
       {mobileToggle && (
-        <div className=" w-full h-[460px] bg-white dark:bg-[#191919] absolute top-0 left-0 shadow-lg">
+        <div className=" w-full bg-white dark:bg-[#191919] absolute top-0 left-0 shadow-lg h-screen my-auto flex flex-col">
           <div className="flex mx-auto flex-row justify-between items-center w-full px-4 h-20 py-4">
             <Logo />
 
@@ -68,7 +68,7 @@ export default function Header() {
               />
             </button>
           </div>
-          <div className="flex flex-col gap-6 px-8">
+          <div className="flex flex-1 flex-col gap-6 px-8">
             {links.map((item) => (
               <div
                 onClick={() => setMobileToggle(!mobileToggle)}
@@ -93,6 +93,7 @@ export default function Header() {
           </div>
         </div>
       )}
+
       <div className="flex mx-auto flex-row justify-between items-center max-w-6xl w-full px-4">
         <Logo />
 
